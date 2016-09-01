@@ -11,7 +11,7 @@ void setup() {
   background(0);
   strokeWeight(5);
   stroke(255);
-  frameRate(60);
+  frameRate(10);
 }
 
 void draw() {
@@ -20,12 +20,20 @@ void draw() {
 	 y = 0;
 	 x1 = 200;
 	 y1 = 0;
+	 int x2 = 30;
+	 ellipse(x2,300,30,30);
+
 	while(y1<400){
 		 x1 = x + (int)(Math.random()*18)-9;
 		 y1 = y + (int)(Math.random()*9); 
 		 line(x,y,x1,y1);
 		 x=x1;
 		 y=y1;
+
+		 if(keyPressed && key == 'w'){
+	 		x2++;
+	 		
+		 }
 	}	
 
 }
